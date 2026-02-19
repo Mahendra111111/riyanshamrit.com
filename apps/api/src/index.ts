@@ -12,6 +12,7 @@
  */
 
 import express, {
+  type Application,
   type Request,
   type Response,
   type NextFunction,
@@ -26,7 +27,7 @@ import {
 } from "@ayurveda/shared-utils";
 import apiRoutes from "./routes/index.js";
 
-const app = express();
+const app: Application = express();
 
 // ─── Security Headers ─────────────────────────────────────────────────────────
 
@@ -91,13 +92,11 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // ─── Health Check ─────────────────────────────────────────────────────────────
 
 app.get("/health", (_req: Request, res: Response) => {
-  res
-    .status(200)
-    .json({
-      status: "ok",
-      service: "api",
-      timestamp: new Date().toISOString(),
-    });
+  res.status(200).json({
+    status: "ok",
+    service: "api",
+    timestamp: new Date().toISOString(),
+  });
 });
 
 // ─── Versioned Routes ─────────────────────────────────────────────────────────

@@ -2,7 +2,7 @@
  * API routes — all route definitions.
  */
 
-import { Router } from "express";
+import { Router, type IRouter } from "express";
 import { verifyJwt } from "../middleware/verifyJwt.js";
 import { requirePermission, requireRole } from "../middleware/requireRole.js";
 
@@ -31,7 +31,7 @@ import {
   paymentWebhookController,
 } from "../controllers/payment.controller.js";
 
-const router = Router();
+const router: IRouter = Router();
 
 // ─── Products ─────────────────────────────────────────────────────────────────
 

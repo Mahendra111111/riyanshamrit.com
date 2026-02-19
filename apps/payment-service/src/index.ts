@@ -13,6 +13,7 @@ import express, {
   type Request,
   type Response,
   type NextFunction,
+  Application,
 } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -32,7 +33,7 @@ import {
   logger,
 } from "@ayurveda/shared-utils";
 
-const app = express();
+const app: Application = express();
 const PORT = Number(process.env["PORT"] ?? 3008);
 const CORS_ORIGIN = process.env["CORS_ORIGIN"] ?? "http://localhost:3000";
 const INVENTORY_SERVICE_URL =
@@ -81,7 +82,10 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
   const requestId =
     (req.headers["x-request-id"] as string | undefined) ?? generateRequestId();
   const userId = req.headers["x-user-id"] as string | undefined;
-  logger.info(`${req.method} ${req.path}`, undefined, { requestId, userId });
+  logger.info(`${req.method} ${req.path}`, undefined, {
+    requestId,
+    ...(userId !== undefined && { userId }),
+  });
   next();
 });
 

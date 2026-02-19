@@ -14,7 +14,7 @@ export default async function HomePage() {
   let featuredProducts: Product[] = [];
   try {
     const res = await productsApi.list({ limit: 6, page: 1 }) as PaginatedResponse<Product>;
-    featuredProducts = res.data ?? [];
+    featuredProducts = res.items ?? [];
   } catch {
     // Graceful degradation — show page without products on error
   }

@@ -80,7 +80,7 @@ export async function updateCartItemController(
 ): Promise<void> {
   try {
     const userId = req.user?.sub;
-    const productId = req.params["productId"];
+    const productId = req.params["productId"] as string;
     if (!userId) {
       res
         .status(401)
@@ -130,7 +130,7 @@ export async function removeCartItemController(
 ): Promise<void> {
   try {
     const userId = req.user?.sub;
-    const productId = req.params["productId"];
+    const productId = req.params["productId"] as string;
     if (!userId) {
       res
         .status(401)

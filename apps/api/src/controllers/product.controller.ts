@@ -44,9 +44,9 @@ export async function listProductsController(
 
     const { category, min_price, max_price, page, limit } = parsed.data;
     const result = await getProducts({
-      category,
-      minPrice: min_price,
-      maxPrice: max_price,
+      ...(category !== undefined && { category }),
+      ...(min_price !== undefined && { minPrice: min_price }),
+      ...(max_price !== undefined && { maxPrice: max_price }),
       page,
       limit,
     });
@@ -66,7 +66,7 @@ export async function getProductController(
   next: NextFunction,
 ): Promise<void> {
   try {
-    const slug = req.params["slug"];
+    const slug = req.params["slug"] as string;
     if (!slug) {
       res
         .status(400)
@@ -108,7 +108,8 @@ export async function createProductController(
       return;
     }
 
-    const product = await createProduct(parsed.data);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const product = await createProduct(parsed.data as any);
     res.status(201).json(createSuccessResponse(product, "Product created"));
   } catch (error) {
     if (error instanceof Error && error.message === "SLUG_ALREADY_EXISTS") {
@@ -133,7 +134,7 @@ export async function updateProductController(
   next: NextFunction,
 ): Promise<void> {
   try {
-    const id = req.params["id"];
+    const id = req.params["id"] as string;
     if (!id) {
       res
         .status(400)
@@ -156,7 +157,8 @@ export async function updateProductController(
       return;
     }
 
-    const product = await updateProduct(id, parsed.data);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const product = await updateProduct(id, parsed.data as any);
     if (!product) {
       res
         .status(404)

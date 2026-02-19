@@ -7,6 +7,7 @@
  */
 
 import express, {
+  type Application,
   type Request,
   type Response,
   type NextFunction,
@@ -22,7 +23,7 @@ import {
   logger,
 } from "@ayurveda/shared-utils";
 
-const app = express();
+const app: Application = express();
 const PORT = Number(process.env["PORT"] ?? 3005);
 
 const supabase = createClient(

@@ -96,7 +96,7 @@ export async function getOrderController(
   try {
     const userId = req.user?.sub;
     const isAdmin = req.user?.role === "admin";
-    const orderId = req.params["id"];
+    const orderId = req.params["id"] as string;
     if (!userId) {
       res
         .status(401)
