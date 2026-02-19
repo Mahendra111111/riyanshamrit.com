@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Unified Premium User Profile</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E7D32",
+                        "primary-light": "#E8F5E9",
+                        "neutral-border": "#E5E7EB",
+                        "background-pure": "#ffffff",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "heading": ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "form": "12px",
+                        "card": "16px",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans bg-background-pure text-slate-900;
+            }
+            h1, h2, h3, h4 {
+                @apply font-heading;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-item {
+            @apply text-primary bg-primary-light font-semibold;
+        }
+        .active-nav-item .material-symbols-outlined {
+            @apply font-medium;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between border-b border-gray-100 px-6 lg:px-12 py-4 bg-white sticky top-0 z-50">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">AYURVEDA</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors" href="#">Product</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden sm:block">
+<input class="w-48 lg:w-64 bg-gray-50 border-none rounded-full px-4 py-1.5 text-sm focus:ring-1 focus:ring-primary/20 placeholder-gray-400" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-gray-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="text-gray-500 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="flex items-center gap-2 py-1.5 px-4 rounded-full border border-gray-100 hover:bg-gray-50 transition-colors">
+<div class="bg-center bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeYlcrw49oF5BtTk5YNDCr4wMgQyESN8nm-_lWhGo82Br8kkWGT10x_pwJEsLa-Ut_0WScPIhxO6LV1AxfQeFCpPRAFZm2sVnMRxCBzSqKPw8ffjkMNt7NatHSfG1PA8OJhyfpAX5iT9c12klaOgwMk8JEtSlrhqK3IfaOXNSwX9_E1Hdux8XFiPtu5AD4BZXx0c2MH5C6QV9OtGPWqBt9sULsI5xYwByjqFKE3SKCsttICI5VFbqfWFL_QCTqHABSaPGEQK9rmH-r");'></div>
+<span class="text-sm font-medium text-gray-700">Jane Doe</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 flex w-full max-w-7xl mx-auto bg-white">
+<aside class="w-64 flex flex-col py-10 px-6 border-r border-gray-50">
+<nav class="flex flex-col gap-1">
+<a class="active-nav-item flex items-center gap-3 px-4 py-3 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="text-sm font-medium">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-gray-100">
+<a class="flex items-center gap-3 px-4 py-3 text-red-500 hover:bg-red-50 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Log Out</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 lg:p-12">
+<div class="max-w-4xl">
+<div class="flex items-center gap-6 mb-12 pb-10 border-b border-gray-100">
+<div class="relative group">
+<div class="bg-center bg-cover rounded-full size-24 border-4 border-white shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgFfan8Wcn-bu87ZcsWz9tfUHsLazNcmohnUkcCtfIrT5v00uJC8cdKo_lnnbx9UVwsPXRrPKSZcRnCti1Ij5DEAKX6EgLDLyre_mDciA_ol45egfHotWw43Wjuu-W11FFhg7FitUwXlVLEms6S_JvAj7pGfAkMTTI9H5SC0ADS8kLGTtnKHwrKGJqTxJI2XhwuXY4UPmhkUdu5CRUUOZtDG0VVseLaDEfJqhr3JFu5aZi_mZJS0i9Ev_-wt7XykKBol5MrgejRarE");'></div>
+<button class="absolute -bottom-1 -right-1 bg-primary text-white p-1.5 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[16px] block">edit</span>
+</button>
+</div>
+<div class="flex flex-col">
+<h1 class="text-2xl font-bold text-slate-900">Jane Doe</h1>
+<p class="text-gray-500 text-sm">jane.doe@example.com</p>
+<div class="mt-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-light text-primary">Premium Member</span>
+</div>
+</div>
+</div>
+<section class="mb-14">
+<div class="mb-6">
+<h2 class="text-lg font-bold text-slate-900">Personal Information</h2>
+<p class="text-sm text-gray-500">Update your personal details and how we can reach you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+<div class="space-y-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">Full Name</label>
+<input class="w-full bg-white border border-neutral-border rounded-form px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all" type="text" value="Jane Doe"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">Email Address</label>
+<input class="w-full bg-white border border-neutral-border rounded-form px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all" type="email" value="jane.doe@example.com"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">Phone Number</label>
+<input class="w-full bg-white border border-neutral-border rounded-form px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all" type="tel" value="+1 (555) 123-4567"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1">Birthday</label>
+<input class="w-full bg-white border border-neutral-border rounded-form px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all" type="date" value="1990-05-15"/>
+</div>
+</div>
+<div class="mt-8">
+<button class="bg-primary text-white px-8 py-3 rounded-full font-semibold text-sm hover:opacity-90 transition-all shadow-sm">
+                            Save Changes
+                        </button>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-lg font-bold text-slate-900">Shipping Addresses</h2>
+<p class="text-sm text-gray-500">Manage your delivery locations.</p>
+</div>
+<button class="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:bg-primary-light px-4 py-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                            Add New
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="relative p-6 border-2 border-primary bg-white rounded-card shadow-sm">
+<div class="absolute top-6 right-6 flex gap-3">
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<div class="mb-4">
+<span class="inline-flex text-[10px] font-bold uppercase tracking-widest text-primary bg-primary-light px-2 py-0.5 rounded">Default</span>
+</div>
+<h4 class="font-bold text-slate-900 mb-1">Jane Doe</h4>
+<p class="text-gray-500 text-sm leading-relaxed">123 Wellness Avenue, Suite 4B</p>
+<p class="text-gray-500 text-sm leading-relaxed mb-4">San Francisco, CA 94110</p>
+<div class="flex items-center gap-2 text-gray-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>+1 (555) 123-4567</span>
+</div>
+</div>
+<div class="relative p-6 border border-neutral-border bg-white rounded-card shadow-sm hover:border-gray-300 transition-colors">
+<div class="absolute top-6 right-6 flex gap-3">
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="mb-4">
+<span class="inline-flex text-[10px] font-bold uppercase tracking-widest text-gray-400 border border-gray-100 px-2 py-0.5 rounded">Office</span>
+</div>
+<h4 class="font-bold text-slate-900 mb-1">Jane Doe</h4>
+<p class="text-gray-500 text-sm leading-relaxed">456 Corporate Blvd</p>
+<p class="text-gray-500 text-sm leading-relaxed mb-4">San Francisco, CA 94105</p>
+<div class="flex items-center gap-2 text-gray-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>+1 (555) 987-6543</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

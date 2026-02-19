@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Settings - Ayurveda Store</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#46ec13",
+                        "background-light": "#ffffff",
+                        "background-dark": "#142210",
+                        "border-light": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "12px", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111b0d] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-border-light bg-white/80 backdrop-blur-md dark:bg-background-dark/80 dark:border-white/10">
+<div class="mx-auto max-w-[1280px] px-10 py-3 flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-[#111b0d] dark:text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Ayurveda Store</h2>
+</div>
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+<div class="text-primary flex bg-background-light dark:bg-white/5 items-center justify-center pl-4 border border-r-0 border-border-light dark:border-white/10 rounded-l-lg">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-border-light dark:border-white/10 bg-background-light dark:bg-white/5 focus:ring-1 focus:ring-primary focus:border-primary text-sm font-normal px-2 rounded-r-lg" placeholder="Search products..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Consultation</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Wellness</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-background-light dark:bg-white/5 border border-border-light dark:border-white/10 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-background-light dark:bg-white/5 border border-border-light dark:border-white/10 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="Close up of a smiling woman user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXGy8G3bFlAdxZCMHocoKp54BkbTM7VBWNkz3fhxBIBhyrve_CugE1GxOIoJXQ-6do8hHWSUcJHmvy6wpTVrFwnbqItrHCWM2WpJ6CRuyTQ2KNRdAJMLWiu8KjQSuiLcYLDgFdukUp8Qt02i9GXWhtQ-pafbgZ7lbvZbVw0_EXrUtg6IGqBV1H63cKjV-0l0KBQ8AYloGvQ6kY4P5tfWGknnoPu1CtnaPDEoLAyzh6qf_p2b8rQy--0sW6AOmyH9rYEG8aVeAObfcG");'></div>
+</div>
+</div>
+</header>
+<!-- Main Layout Container -->
+<main class="mx-auto flex w-full max-w-[1280px] flex-1 px-10 py-10">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0">
+<div class="sticky top-28 flex flex-col gap-6">
+<div class="px-3">
+<h1 class="text-xl font-bold tracking-tight">My Account</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Manage your preferences</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg hover:bg-background-light dark:hover:bg-white/5 transition-all text-gray-600 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-[22px]">person</span>
+                            Profile
+                        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg hover:bg-background-light dark:hover:bg-white/5 transition-all text-gray-600 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-[22px]">package_2</span>
+                            Orders
+                        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg hover:bg-background-light dark:hover:bg-white/5 transition-all text-gray-600 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+                            Addresses
+                        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-bold rounded-lg bg-primary/10 text-primary border border-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined text-[22px] active-nav-icon">settings</span>
+                            Settings
+                        </a>
+<div class="my-4 border-t border-border-light dark:border-white/10"></div>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg hover:bg-red-50 dark:hover:bg-red-900/10 text-red-500 transition-all" href="#">
+<span class="material-symbols-outlined text-[22px]">logout</span>
+                            Logout
+                        </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1 ml-12">
+<!-- Page Heading -->
+<div class="mb-10">
+<h2 class="text-4xl font-black tracking-tight mb-2">Account Settings</h2>
+<p class="text-gray-500 dark:text-gray-400 text-lg">Manage your security and notification preferences.</p>
+</div>
+<div class="space-y-12">
+<!-- Security Section -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden">
+<div class="px-8 py-6 border-b border-border-light dark:border-white/10">
+<h3 class="text-xl font-bold">Security</h3>
+<p class="text-sm text-gray-500 mt-1">Change your password and secure your account.</p>
+</div>
+<div class="p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+<div class="col-span-full">
+<label class="block text-sm font-semibold mb-2">Current Password</label>
+<input class="w-full bg-white dark:bg-white/5 border border-border-light dark:border-white/10 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400" placeholder="Enter current password" type="password"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">New Password</label>
+<input class="w-full bg-white dark:bg-white/5 border border-border-light dark:border-white/10 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400" placeholder="Min. 8 characters" type="password"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Confirm New Password</label>
+<input class="w-full bg-white dark:bg-white/5 border border-border-light dark:border-white/10 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-gray-400" placeholder="Repeat new password" type="password"/>
+</div>
+</div>
+<div class="mt-8">
+<button class="bg-primary text-[#111b0d] font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                                    Update Password
+                                </button>
+</div>
+</div>
+</div>
+<!-- Notifications Section -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden">
+<div class="px-8 py-6 border-b border-border-light dark:border-white/10">
+<h3 class="text-xl font-bold">Notifications</h3>
+<p class="text-sm text-gray-500 mt-1">Manage how you receive updates and alerts.</p>
+</div>
+<div class="p-8 space-y-6">
+<!-- Toggle Item 1 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-base font-semibold">Email Notifications</p>
+<p class="text-sm text-gray-500">Order updates, newsletters, and wellness tips.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="text-base font-semibold">SMS Alerts</p>
+<p class="text-sm text-gray-500">Instant delivery tracking and security codes.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Account Management Section -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden">
+<div class="px-8 py-6 border-b border-border-light dark:border-white/10">
+<h3 class="text-xl font-bold">Account Management</h3>
+<p class="text-sm text-gray-500 mt-1">Actions related to your account deletion and privacy.</p>
+</div>
+<div class="p-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<p class="text-base font-semibold text-red-500">Danger Zone</p>
+<p class="text-sm text-gray-500 max-w-md">Once you delete your account, there is no going back. All your order history and earned wellness points will be removed.</p>
+</div>
+<button class="bg-red-50 text-red-600 font-bold px-8 py-3 rounded-lg hover:bg-red-500 hover:text-white transition-all border border-red-200 whitespace-nowrap">
+                                    Delete Account
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Decoration -->
+<footer class="mt-auto py-10 border-t border-border-light dark:border-white/10 bg-background-light dark:bg-background-dark/50">
+<div class="mx-auto max-w-[1280px] px-10 text-center text-sm text-gray-400">
+<p>© 2024 Ayurveda Store. Inspired by Ancient Wisdom, Designed for Modern Living.</p>
+</div>
+</footer>
+</div>
+</body></html>

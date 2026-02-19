@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Wishlist - AyurStore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2f7f34",
+                "background-light": "#f6f8f6",
+                "background-dark": "#141e15",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden font-display">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between border-b border-solid border-b-[#eaf0ea] dark:border-b-[#2a3a2b] bg-white dark:bg-[#1a261b] px-10 py-3 gap-6">
+<div class="flex items-center gap-2 text-[#111811] dark:text-[#f9fbf9] shrink-0">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-[#111811] dark:text-[#f9fbf9] text-xl font-bold leading-tight tracking-[-0.015em]">AyurStore</h2>
+</div>
+<nav class="flex items-center gap-6 shrink-0">
+<a class="text-[#111811] dark:text-[#f9fbf9] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111811] dark:text-[#f9fbf9] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Product</a>
+<a class="text-[#111811] dark:text-[#f9fbf9] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#111811] dark:text-[#f9fbf9] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="flex-1 max-w-sm">
+<label class="flex flex-col h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+<div class="text-[#5e8761] dark:text-[#8eb391] flex border-none bg-[#eaf0ea] dark:bg-[#2a3a2b] items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#eaf0ea] dark:bg-[#2a3a2b] text-[#111811] dark:text-[#f9fbf9] focus:ring-0 px-3 text-sm font-normal placeholder:text-[#5e8761]" placeholder="Search remedies..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#eaf0ea] dark:bg-[#2a3a2b] text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#eaf0ea] dark:bg-[#2a3a2b] text-[#111811] dark:text-[#f9fbf9] hover:bg-primary/10 transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+                        Login
+                    </button>
+</div>
+</header>
+<main class="flex-1">
+<div class="max-w-[1200px] mx-auto px-10 py-8">
+<div class="flex flex-wrap items-center gap-2 mb-6">
+<a class="text-[#5e8761] dark:text-[#8eb391] text-sm font-medium hover:underline" href="#">Home</a>
+<span class="text-[#5e8761] dark:text-[#8eb391] text-sm font-medium">/</span>
+<a class="text-[#5e8761] dark:text-[#8eb391] text-sm font-medium hover:underline" href="#">My Account</a>
+<span class="text-[#5e8761] dark:text-[#8eb391] text-sm font-medium">/</span>
+<span class="text-primary text-sm font-bold">Wishlist</span>
+</div>
+<div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#111811] dark:text-[#f9fbf9] text-4xl font-black leading-tight tracking-[-0.033em]">My Wishlist</h1>
+<p class="text-[#5e8761] dark:text-[#8eb391] text-lg font-normal">You have <span class="font-bold text-primary">4 items</span> saved for later.</p>
+</div>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#eaf0ea] dark:bg-[#2a3a2b] text-[#111811] dark:text-[#f9fbf9] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined mr-2 text-xl">shopping_cart_checkout</span>
+<span class="truncate">Add All to Cart</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-col bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm border border-[#eaf0ea] dark:border-[#2a3a2b] group relative">
+<button class="absolute top-3 right-3 z-10 size-8 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bottle of Organic Ashwagandha supplement" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBauD3Xz-CVYz8F1tPEL4_WH64T-pbQ-dVQTTV4jlcHnIFbChxKp3Fk2eTIqkBHvgitJyXTOOGUKGBy-kS-PlLZhJ66VC2FL9PNNi5962wdgbQ1MMotwYISQoz9zO5NZKHBKxKKL09d1MqWIzilwSS4PpG0KMkh3CWV1fCW_6ur2_7kA2lZ2eRc0md66Fkzx_rSpVtBH0_JmXxQ1VSzoO9HlI_-gQ5xARwCsgovGwX-MccV337CiGUg5CsL5hMFxUhc21JAmpmMpzA6");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="mb-3">
+<p class="text-[#5e8761] dark:text-[#8eb391] text-xs font-bold uppercase tracking-wider mb-1">Anxiety &amp; Sleep</p>
+<p class="text-[#111811] dark:text-[#f9fbf9] text-lg font-bold leading-snug">Organic Ashwagandha</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary text-lg font-black">$24.00</p>
+<span class="text-[10px] bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded font-bold">IN STOCK</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm border border-[#eaf0ea] dark:border-[#2a3a2b] group relative">
+<button class="absolute top-3 right-3 z-10 size-8 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Brahmi Powder in a small wooden bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXpzlL6NbZ0Rfn1-dEygrnHSh43RsJs6hr2YXx2-VU3fWf1Vg1sXTdBZ_7K2GRlFb6hfXyxad4vikoOPrccIdlXUPKECOu3cxvvQS7Ny0xN1EF19n5rTYYfnGPrVthNOWg5nXcG6hrIohoWkhzOpFVXQ3H-khnW1E7-lJgylYa7Ho35vUH6iuaW7jgwK2Cb7w9pQw7GzXq9godu5zlzt1fDSb1rl7TGP2xn1NN4qJOSmNAoE5UGwLCTAUxsGOlxCufjLu6x4ExCe_v");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="mb-3">
+<p class="text-[#5e8761] dark:text-[#8eb391] text-xs font-bold uppercase tracking-wider mb-1">Memory Booster</p>
+<p class="text-[#111811] dark:text-[#f9fbf9] text-lg font-bold leading-snug">Pure Brahmi Powder</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary text-lg font-black">$18.50</p>
+<span class="text-[10px] bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded font-bold">IN STOCK</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm border border-[#eaf0ea] dark:border-[#2a3a2b] group relative">
+<button class="absolute top-3 right-3 z-10 size-8 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Herbal Triphala capsules in a glass bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt5HPBUrdGsWSWCCNBuqXFkJlBoEuT-NVXMKgK8zh3RKDXfzy54xc-ax1tRaGsOrtSsEuANC2ivxh6KuEhJ8F4ONfBmRkaBNnJZZeuLmwhLxNmAIN_s8HfcJvCDVZC2WCWJ0UG6GGS0ycMbdDLZH4R3NhvIo6uqp2b87o4ycLfjqOAVkKH7sZA9jwps2XXSOa5wz-82KKnu2ktxtY1UIUEi_s1COm_OmYKQ1RkuhTTC5PLIa_R6kzNYzxy8yNB_0uV_yEHVFMW-xA9");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="mb-3">
+<p class="text-[#5e8761] dark:text-[#8eb391] text-xs font-bold uppercase tracking-wider mb-1">Digestion</p>
+<p class="text-[#111811] dark:text-[#f9fbf9] text-lg font-bold leading-snug">Triphala Churna</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary text-lg font-black">$15.00</p>
+<span class="text-[10px] bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded font-bold">IN STOCK</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm border border-[#eaf0ea] dark:border-[#2a3a2b] group relative">
+<button class="absolute top-3 right-3 z-10 size-8 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Neem leaf extract capsules" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf_0yVGywq-Cm2rQM_I_RovHF_nYqQtRruoPGjsVh99PRSRu4ib_Mm76y9tjYtBbjV-ABRqG8qjofBI5UkrV74l584rbEyDrwbYTYviLl5KnSwFaszTcpNWFLb3bTWTB3L1DubOWOiYlSCumakv2_73Xso9NtOtB8kQ_cTKfp63N1Li2nNZo3GaxanVSv5ftqv1gMNaTgCO1fGmdR6jdyJ96x9Y_1SEzghZjfDNR_Ovobm-vixPA0JAktWplmdWO3lnFQnS0_oXsLz");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="mb-3">
+<p class="text-[#5e8761] dark:text-[#8eb391] text-xs font-bold uppercase tracking-wider mb-1">Skin Health</p>
+<p class="text-[#111811] dark:text-[#f9fbf9] text-lg font-bold leading-snug">Neem Capsules</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-primary text-lg font-black">$20.00</p>
+<span class="text-[10px] bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 px-2 py-0.5 rounded font-bold">LOW STOCK</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-10 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                        Add to Cart
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-between items-center py-8 border-t border-[#eaf0ea] dark:border-[#2a3a2b]">
+<button class="flex items-center text-[#5e8761] dark:text-[#8eb391] font-bold hover:text-primary transition-colors">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+                            Continue Shopping
+                        </button>
+<div class="flex gap-4">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#111811] dark:text-[#f9fbf9] text-sm font-bold leading-normal hover:bg-red-50 transition-colors">
+<span class="truncate">Clear Wishlist</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-md">
+<span class="truncate">View Shopping Cart</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-[#1a261b] border-t border-[#eaf0ea] dark:border-[#2a3a2b] py-10">
+<div class="max-w-[1200px] mx-auto px-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+<div>
+<div class="flex items-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined">eco</span>
+<span class="font-bold text-xl text-[#111811] dark:text-[#f9fbf9]">AyurStore</span>
+</div>
+<p class="text-[#5e8761] dark:text-[#8eb391] text-sm">Empowering your health journey with ancient Ayurvedic wisdom and modern convenience.</p>
+</div>
+<div>
+<h4 class="font-bold text-[#111811] dark:text-[#f9fbf9] mb-4">Quick Links</h4>
+<ul class="text-sm space-y-2 text-[#5e8761] dark:text-[#8eb391]">
+<li><a class="hover:text-primary transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Refunds</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#111811] dark:text-[#f9fbf9] mb-4">Newsletter</h4>
+<div class="flex gap-2">
+<input class="flex-1 rounded-lg border-[#eaf0ea] dark:border-[#2a3a2b] dark:bg-[#2a3a2b] dark:text-white focus:ring-primary focus:border-primary" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm">Join</button>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,30 @@
+{
+  "name": "@ayurveda/shared-utils",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shared utility functions, response formatters, and logger for the Ayurveda platform",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0",
+    "@ayurveda/shared-types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.0",
+    "@types/uuid": "^10.0.0",
+    "@types/node": "^22.0.0"
+  }
+}

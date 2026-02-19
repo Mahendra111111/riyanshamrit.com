@@ -1,0 +1,28 @@
+{
+  "name": "@ayurveda/notification-service",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Notification Service — event-driven email notifications via Redis Streams",
+  "main": "dist/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ioredis": "^5.4.1",
+    "resend": "^4.0.0",
+    "@ayurveda/shared-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.0"
+  }
+}

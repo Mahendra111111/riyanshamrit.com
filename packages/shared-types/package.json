@@ -1,0 +1,25 @@
+{
+  "name": "@ayurveda/shared-types",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shared TypeScript types and interfaces for the Ayurveda platform",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.0"
+  }
+}

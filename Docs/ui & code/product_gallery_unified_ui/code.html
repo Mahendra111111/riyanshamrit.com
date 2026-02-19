@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Gallery Reordered Navbar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f34",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#111811] dark:text-white">
+<div class="layout-container flex flex-col min-h-screen">
+<header class="flex items-center gap-8 border-b border-solid border-[#eaf0ea] dark:border-[#2a3a2b] bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary shrink-0">
+<div class="size-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#111811] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Ayurveda Global</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#111811] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="#">Product</a>
+<a class="text-[#111811] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#111811] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="flex-1 flex justify-center px-4">
+<label class="flex flex-col w-full max-w-md !h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+<div class="text-[#5e8761] flex border-none bg-[#eaf0ea] dark:bg-[#1e2e1f] items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#eaf0ea] dark:bg-[#1e2e1f] focus:ring-0 text-[#111811] dark:text-white placeholder:text-[#5e8761] px-4 pl-2 text-sm font-normal" placeholder="Search products..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#eaf0ea] dark:bg-[#1e2e1f] text-[#111811] dark:text-white hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#eaf0ea] dark:bg-[#1e2e1f] text-[#111811] dark:text-white hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+</button>
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:brightness-110 transition-all ml-2">
+<span class="material-symbols-outlined text-[20px]">login</span>
+                Login
+            </button>
+</div>
+</header>
+<main class="flex-1 max-w-[1440px] mx-auto w-full px-10 py-6 grid grid-cols-12 gap-8">
+<aside class="col-span-3 flex flex-col gap-6">
+<div class="flex flex-wrap items-center gap-2 py-2">
+<a class="text-[#5e8761] text-xs font-medium hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[#5e8761] text-[14px]">chevron_right</span>
+<a class="text-[#5e8761] text-xs font-medium hover:text-primary" href="#">Shop</a>
+<span class="material-symbols-outlined text-[#5e8761] text-[14px]">chevron_right</span>
+<span class="text-[#111811] dark:text-white text-xs font-semibold">All Products</span>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl p-6 shadow-sm border border-[#eaf0ea] dark:border-[#2a3a2b]">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div>
+<h3 class="text-[#111811] dark:text-white text-base font-bold">Categories</h3>
+<p class="text-[#5e8761] text-xs">Filter by lifestyle type</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary cursor-pointer group">
+<span class="material-symbols-outlined text-[20px] fill-1">spa</span>
+<p class="text-sm font-semibold">All Products</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111811] dark:text-gray-300 hover:bg-[#f6f8f6] dark:hover:bg-[#1e2e1f] cursor-pointer transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-gray-400 group-hover:text-primary">face</span>
+<p class="text-sm font-medium">Skincare</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111811] dark:text-gray-300 hover:bg-[#f6f8f6] dark:hover:bg-[#1e2e1f] cursor-pointer transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-gray-400 group-hover:text-primary">medication</span>
+<p class="text-sm font-medium">Supplements</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111811] dark:text-gray-300 hover:bg-[#f6f8f6] dark:hover:bg-[#1e2e1f] cursor-pointer transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-gray-400 group-hover:text-primary">water_drop</span>
+<p class="text-sm font-medium">Wellness Oils</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111811] dark:text-gray-300 hover:bg-[#f6f8f6] dark:hover:bg-[#1e2e1f] cursor-pointer transition-colors group">
+<span class="material-symbols-outlined text-[20px] text-gray-400 group-hover:text-primary">air</span>
+<p class="text-sm font-medium">Hair Care</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-[#111811] dark:text-white text-base font-bold">Price Range</h3>
+<div class="flex flex-col gap-6 py-2">
+<div class="relative h-1.5 w-full rounded-full bg-[#d5e2d6] dark:bg-[#2a3a2b]">
+<div class="absolute h-full left-[10%] right-[30%] bg-primary rounded-full"></div>
+<div class="absolute -left-1 -top-2.5 flex flex-col items-center gap-1 left-[10%]">
+<div class="size-4 rounded-full bg-primary border-2 border-white dark:border-background-dark shadow-md cursor-pointer"></div>
+<p class="text-[#111811] dark:text-gray-400 text-[10px] font-bold mt-1">$10</p>
+</div>
+<div class="absolute -left-1 -top-2.5 flex flex-col items-center gap-1 left-[70%]">
+<div class="size-4 rounded-full bg-primary border-2 border-white dark:border-background-dark shadow-md cursor-pointer"></div>
+<p class="text-[#111811] dark:text-gray-400 text-[10px] font-bold mt-1">$150</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-[#111811] dark:text-white text-base font-bold">Customer Rating</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-[18px] fill-1">star</span>
+<span class="material-symbols-outlined text-[18px] text-gray-300">star</span>
+</div>
+<span class="text-xs text-[#5e8761]">&amp; up</span>
+</label>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-md hover:brightness-110 transition-all">
+                        Apply Filters
+                    </button>
+</div>
+</div>
+</aside>
+<div class="col-span-9 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-2 border-b border-[#eaf0ea] dark:border-[#2a3a2b]">
+<div>
+<h1 class="text-[#111811] dark:text-white text-2xl font-bold tracking-tight">All Ayurvedic Products</h1>
+<p class="text-[#5e8761] text-sm mt-1">Showing 1-9 of 48 results</p>
+</div>
+<div class="flex items-center gap-4">
+<label class="text-sm text-[#5e8761] font-medium">Sort by:</label>
+<select class="bg-white dark:bg-background-dark border-[#eaf0ea] dark:border-[#2a3a2b] rounded-lg text-sm text-[#111811] dark:text-white focus:ring-primary focus:border-primary px-3 py-1.5 min-w-[160px]">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#eaf0ea] dark:border-[#2a3a2b] group">
+<div class="relative aspect-square overflow-hidden bg-[#f0f4f0]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Bottle of organic ayurvedic hair oil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD94Kps-dTmfkRPujRcUJRE-2zajozplLFrvMrTYWqHv4M2VoDBUV48j-OdJI19Lt5kx_9SYER6MErd-pPw8rSOVwV0T177XBNCMO2pFZhYob-z2r42S_TiY4rAwAu2xQvz30UibsV0L2F8BQ309KqjXDwko1R_VUOuRDW8ffHflDDi37TgQ46JZ1s4JxvtZ_QywvL-ComHPdIjnPWNsQ5oZAbfBnVkhpeOwDW4wRrm85coaMxjuaajGoD8xWSqqVKu9Dmva5EtN81M"/>
+<button class="absolute top-3 right-3 size-9 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<p class="text-[10px] uppercase tracking-wider text-primary font-bold">Wellness Oils</p>
+<h3 class="text-[#111811] dark:text-white font-semibold text-base line-clamp-1">Nourishing Brahmi Hair Oil</h3>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1 text-gray-300">star</span>
+<span class="text-[10px] text-[#5e8761] ml-1">(42)</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="text-xl font-bold text-primary">$34.99</span>
+<button class="flex items-center gap-2 bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                Add
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#eaf0ea] dark:border-[#2a3a2b] group">
+<div class="relative aspect-square overflow-hidden bg-[#f0f4f0]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Herbal supplement capsules in a glass bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALBPanauGbju6b6I0uC0JDBg4_WAqbCWNd8smgZLyoOUAqlolfj9JtRDwEDsfT3AuRJSL97yiRU70mQOXUYpU897tpz_K6T61c4kE6WDGQmDZfotKVi9u9TjenEvVPQ0DbygkU9AlnRkDf8b6rGul6Pc3LOVNGSuuw27DhREdEho5Ulz0XI748CjpsAEAkt23JsEHDxe5s3xlmJET6bR7FPzt_pqfqdMAwoefmm6mqQJVRcO1n7-hXiTMHzCdm2x5yuaKRbIIbQbhN"/>
+<div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">HOT</div>
+<button class="absolute top-3 right-3 size-9 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<p class="text-[10px] uppercase tracking-wider text-primary font-bold">Supplements</p>
+<h3 class="text-[#111811] dark:text-white font-semibold text-base line-clamp-1">Pure Organic Ashwagandha</h3>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="text-[10px] text-[#5e8761] ml-1">(128)</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="text-xl font-bold text-primary">$24.00</span>
+<button class="flex items-center gap-2 bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                Add
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a261b] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#eaf0ea] dark:border-[#2a3a2b] group">
+<div class="relative aspect-square overflow-hidden bg-[#f0f4f0]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ayurvedic face cream in a premium jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9tfs1u8QqdLz87oswpxLllTmHgWgThmX3JqkfhwHF-hC_uvJWUYLdLTCVkoPOcwmc3aDyYHrW7JkShcxqxvSlOL0Fs5_Kj2xKp-R51Eep1NSumeINItGuQT7eQbAh3B0FA4SvMN-koLRSD7htWvk2c_PFOLwmyKOKpymf4XiWcPNjfyVnv_GlinvIM6uq9sWYpeWXqY_P67ATSZJaJ-_YVku7n3sOPl_OPKWQz8RX0dEw37sEsMeZW28mGZYZHOyhdagsXRsbjmNz"/>
+<button class="absolute top-3 right-3 size-9 rounded-full bg-white/80 dark:bg-black/40 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<p class="text-[10px] uppercase tracking-wider text-primary font-bold">Skincare</p>
+<h3 class="text-[#111811] dark:text-white font-semibold text-base line-clamp-1">Saffron &amp; Turmeric Face Cream</h3>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] fill-1">star</span>
+<span class="material-symbols-outlined text-[14px] text-gray-300">star</span>
+<span class="text-[10px] text-[#5e8761] ml-1">(56)</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="text-xl font-bold text-primary">$42.50</span>
+<button class="flex items-center gap-2 bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                                Add
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center items-center gap-2 mt-8 py-10">
+<button class="size-10 flex items-center justify-center rounded-lg border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#5e8761] hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-md">1</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#111811] dark:text-white hover:bg-primary hover:text-white transition-all">2</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#111811] dark:text-white hover:bg-primary hover:text-white transition-all">3</button>
+<span class="text-[#5e8761] mx-1">...</span>
+<button class="size-10 flex items-center justify-center rounded-lg border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#111811] dark:text-white hover:bg-primary hover:text-white transition-all">8</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-[#eaf0ea] dark:border-[#2a3a2b] text-[#5e8761] hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-[#0f170f] border-t border-[#eaf0ea] dark:border-[#2a3a2b] py-12 px-10">
+<div class="max-w-[1440px] mx-auto grid grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[32px]">spa</span>
+<h2 class="text-[#111811] dark:text-white text-lg font-bold">Ayurveda Global</h2>
+</div>
+<p class="text-[#5e8761] text-sm leading-relaxed">Modernizing the ancient wisdom of Ayurveda for a balanced life. Quality products for mind, body, and spirit.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111811] dark:text-white font-bold text-sm">Shop</h4>
+<ul class="flex flex-col gap-2 text-[#5e8761] text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Sets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111811] dark:text-white font-bold text-sm">Help</h4>
+<ul class="flex flex-col gap-2 text-[#5e8761] text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Refunds &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111811] dark:text-white font-bold text-sm">Newsletter</h4>
+<p class="text-[#5e8761] text-xs">Join our journey for wellness tips and early access.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-[#f6f8f6] dark:bg-[#1e2e1f] border-none rounded-lg text-xs p-2 focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-white text-xs px-4 py-2 rounded-lg font-bold">Sign Up</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-[#eaf0ea] dark:border-[#2a3a2b] flex justify-between items-center text-[#5e8761] text-xs">
+<p>© 2024 Ayurveda Global. All rights reserved.</p>
+<div class="flex gap-6">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

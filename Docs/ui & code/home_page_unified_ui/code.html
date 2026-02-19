@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Riyansh Amrit | Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2f7f34",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#141e15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white font-display">
+<header class="sticky-nav bg-white/95 dark:bg-background-dark/95 border-b border-solid border-[#eaf0ea] dark:border-white/10 px-6 md:px-10 lg:px-20 py-3">
+<div class="max-w-[1440px] mx-auto flex items-center gap-6 lg:gap-8">
+<div class="flex items-center gap-3 shrink-0">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#111811] dark:text-white text-xl font-bold leading-tight tracking-tight hidden sm:block whitespace-nowrap">Riyansh Amrit</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-6 shrink-0">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-[#111811]/70 dark:text-white/70 hover:text-primary transition-colors" href="#">Product</a>
+<a class="text-sm font-medium text-[#111811]/70 dark:text-white/70 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-[#111811]/70 dark:text-white/70 hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="flex-1 max-w-md">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#5e8761] text-xl">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-[#eaf0ea] dark:bg-white/5 border-none focus:ring-2 focus:ring-primary text-sm placeholder:text-[#5e8761]" placeholder="Search products, herbs..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#eaf0ea] dark:bg-white/10 hover:bg-primary/10 transition-colors" title="Wishlist">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-[#eaf0ea] dark:bg-white/10 hover:bg-primary/10 transition-colors" title="Cart">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+<button class="h-10 px-5 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-primary/90 transition-all">
+                Login
+            </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto">
+<section class="px-6 md:px-10 lg:px-20 py-12 md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
+<div class="space-y-4">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase">Organic &amp; Natural</span>
+<h1 class="text-[#111811] dark:text-white text-5xl lg:text-7xl font-black leading-[1.1] tracking-[-0.03em]">
+                        Pure Ayurveda for a <span class="text-primary">Modern Life</span>
+</h1>
+<p class="text-lg text-[#111811]/70 dark:text-white/70 max-w-lg leading-relaxed">
+                        Discover the ancient wisdom of healing with Riyansh Amrit Juice. 100% natural extracts crafted to revitalize your body and soul.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 h-14 bg-primary text-white rounded-lg font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        Shop Now
+                    </button>
+<button class="px-8 h-14 border-2 border-primary/20 hover:border-primary text-primary rounded-lg font-bold text-lg transition-all">
+                        View Story
+                    </button>
+</div>
+<div class="flex items-center gap-6 pt-4 border-t border-[#eaf0ea] dark:border-white/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-xs font-semibold text-[#5e8761]">100% Organic</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<span class="text-xs font-semibold text-[#5e8761]">Fast Shipping</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl -z-10 scale-90"></div>
+<div class="aspect-square w-full rounded-2xl bg-center bg-no-repeat bg-cover shadow-2xl" data-alt="Premium glass bottle of green ayurvedic juice with fresh herbs nearby" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8K74lv0a7GxzZe5vVBd0jbkbSPYm6ZA09EKzTikxVzAoWfUHxEEBHATz9l2zX0Dv3j0HQBnHFdbDSUgk88ij4Ebav07_4bmN0e6U0gnQppuyMCbJiHJZQfCTzGB1vfwNJMlKvBUFG6yXQdy0VgwIrpOKrCt4ZlYSZ2n_UDZEWYczZCzpjKdY4ZQ8_NzSHhrfooEZGuAMoyW9msFanBqQr1AVRjC31xycPkmaD3Y3wYGXR4PTPvtirsoiesaBDgJ_tUWxTNHh5S2hQ')">
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-10 lg:px-20 pt-16 pb-8 flex items-center justify-between">
+<div class="space-y-1">
+<h2 class="text-3xl font-bold text-[#111811] dark:text-white">Best-Sellers</h2>
+<p class="text-[#5e8761] text-sm font-medium">Customer favorites curated just for you</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
+            View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</section>
+<section class="px-6 md:px-10 lg:px-20 pb-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group bg-white dark:bg-white/5 rounded-xl border border-[#eaf0ea] dark:border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="relative aspect-square overflow-hidden bg-[#f9fbf9]">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Bottle of Amrit Juice on a wooden background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMo-hcP7DGV0qVD5Algy3wgtmQRWj2Bc3vNbBrYKbITd6rn0-qEnee6dqOtk0VcJusUbynjacC5K-ibeYmUqDSqqrXu69UO_mZhNUALKAHGmKnKF4sp5J-JzjAWnUAjr5BpTKrutcH_I4sqn2_IO1_P6mmic3pTzoI1xRnrlkn7yGtujG2qoHfiUX7Lzw1J43ySsIUDy3qmE6urUbh9JJo8uNSnmNbYvqxty2zaFW4te5CwC47_823K-AZKd0CvRzLaAJajnBvmZYj')"></div>
+<span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
+</div>
+<div class="p-5 flex flex-col gap-1">
+<h3 class="text-lg font-bold text-[#111811] dark:text-white">Amrit Juice</h3>
+<p class="text-sm text-[#5e8761] mb-3">500ml • Detox Formula</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xl font-black text-primary">₹499</span>
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white rounded-lg transition-colors font-bold text-sm">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Add
+                        </button>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-white/5 rounded-xl border border-[#eaf0ea] dark:border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="relative aspect-square overflow-hidden bg-[#f9fbf9]">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Organic herbal tea leaves in a bowl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6ZVYNbb7Suv_3ALw8RtnEsRq3wUr5SUyiT93aEzSBy2vouagFFc3KUoPBCHwa3WnHXUjWLIMWdM1JyfehxKJFLD9r8XHMFY0a5soXy-uouMRmyjtX09TWABxKgFLL5rWzZSyfwijYbHexxE6_RqG6MfljOhFKTi7Z9hESmCw5IT7x6eudQxpfinkzISZb9xjWVpH8iGnS3xTR1ics7IQNmljq9u57Uzdab2pGY_jyHM7zsU0ypP9WKcK3mPdM7w3XDskaAFZJJlEh')"></div>
+</div>
+<div class="p-5 flex flex-col gap-1">
+<h3 class="text-lg font-bold text-[#111811] dark:text-white">Herbal Tea</h3>
+<p class="text-sm text-[#5e8761] mb-3">100g • Immunity Booster</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xl font-black text-primary">₹299</span>
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white rounded-lg transition-colors font-bold text-sm">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Add
+                        </button>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-white/5 rounded-xl border border-[#eaf0ea] dark:border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="relative aspect-square overflow-hidden bg-[#f9fbf9]">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Golden organic honey in a glass jar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2GZEfbmHE1we1kvVj9NMIWDVOAhTB-ZzIjKRHP3uI3jDOewmn_aGQjzg1flLfkZFr1H0D2mQqCmcLnR_kHhYCenuMm34nedBb2Cc_lvdmD91GHZ3CoDducbFd3-wVJOuA7uvTSiJ8iJtGAlD3cDb7dfIiX_HQ1nQti5r1SZVAXrmUeQAOhzLakt3pSuHhFKRCODt7vtFTWw3a9xm3skOyt_e3qBKHecEuP6QGpjngjRlyxwL1D5k7mUnY23o6Oi2-KXmTWA8CEu4W')"></div>
+</div>
+<div class="p-5 flex flex-col gap-1">
+<h3 class="text-lg font-bold text-[#111811] dark:text-white">Organic Honey</h3>
+<p class="text-sm text-[#5e8761] mb-3">250g • Raw &amp; Unfiltered</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xl font-black text-primary">₹350</span>
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white rounded-lg transition-colors font-bold text-sm">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Add
+                        </button>
+</div>
+</div>
+</div>
+<div class="group bg-white dark:bg-white/5 rounded-xl border border-[#eaf0ea] dark:border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="relative aspect-square overflow-hidden bg-[#f9fbf9]">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Ashwagandha powder in a rustic clay bowl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdGbn2Z5K6ZdHMj9vuaTQYFZGRceuryn7Mo5dLbvD6zRrmeewPSby2C4FEXNxgD3hjOIeJYCHv_A6j1tZCa0bF32tBXxt-1tIGiTOe6-RK-pnZv_KQadZQNErMQv7r1Em1h5sF3GAWzx1PoeS0mmpYhrhBWhoMnt42Emme5pr1TJyW8RY9LLzTd2vfQ-7meF178GbJlMg1-22mdX_1D-wvPd6iU4P7YF4IyDzXkXNu3dBKNXwmry07MaVcskzGO76MzqzMdt6t0ib-')"></div>
+</div>
+<div class="p-5 flex flex-col gap-1">
+<h3 class="text-lg font-bold text-[#111811] dark:text-white">Ashwagandha</h3>
+<p class="text-sm text-[#5e8761] mb-3">50g • Vitality Powder</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xl font-black text-primary">₹199</span>
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary/10 group-hover:bg-primary text-primary group-hover:text-white rounded-lg transition-colors font-bold text-sm">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            Add
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 md:px-10 lg:px-20 py-16">
+<div class="rounded-3xl bg-[#eaf0ea] dark:bg-white/5 overflow-hidden relative">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-10 pointer-events-none"></div>
+<div class="px-8 py-16 md:px-20 md:py-24 text-center flex flex-col items-center gap-8 relative z-10">
+<div class="space-y-4">
+<h2 class="text-3xl md:text-5xl font-black text-[#111811] dark:text-white tracking-tight">
+                        Stay Natural, Stay Healthy
+                    </h2>
+<p class="text-lg text-[#111811]/70 dark:text-white/70 max-w-2xl mx-auto">
+                        Join over 50,000+ people who receive our weekly Ayurvedic tips and exclusive early-access offers. No spam, just pure goodness.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+<input class="flex-1 h-14 rounded-lg border-none focus:ring-2 focus:ring-primary px-6 dark:bg-white/10" placeholder="Enter your email" type="email"/>
+<button class="h-14 px-8 bg-primary text-white rounded-lg font-bold hover:bg-primary/90 transition-all shrink-0">
+                        Join Now
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-[#eaf0ea] dark:border-white/10">
+<div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-2 text-primary">
+<svg class="size-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<span class="text-xl font-bold text-[#111811] dark:text-white">Riyansh Amrit</span>
+</div>
+<p class="text-sm leading-relaxed text-[#5e8761]">
+                Pioneering modern Ayurvedic solutions for a healthier lifestyle. 100% organic, responsibly sourced, and traditionally crafted.
+            </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-lg bg-[#eaf0ea] dark:bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 rounded-lg bg-[#eaf0ea] dark:bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+<a class="size-10 rounded-lg bg-[#eaf0ea] dark:bg-white/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#111811] dark:text-white uppercase tracking-wider text-xs">Shop</h4>
+<ul class="space-y-4 text-sm font-medium text-[#111811]/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Juices</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Herbal Tea</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Honey &amp; Sweets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Powders</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#111811] dark:text-white uppercase tracking-wider text-xs">Company</h4>
+<ul class="space-y-4 text-sm font-medium text-[#111811]/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#111811] dark:text-white uppercase tracking-wider text-xs">Support</h4>
+<ul class="space-y-4 text-sm font-medium text-[#111811]/60 dark:text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Refunds</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#eaf0ea] dark:border-white/10 py-8 px-6 text-center text-xs font-medium text-[#5e8761]">
+        © 2024 Riyansh Amrit Ayurveda. All rights reserved.
+    </div>
+</footer>
+
+</body></html>

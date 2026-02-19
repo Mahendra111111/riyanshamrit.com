@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Orders - Unified Premium Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#46ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142210",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(70, 236, 19, 0.1);
+            border-right: 4px solid #46ec13;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#111b0d] dark:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#eaf3e7] dark:border-white/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-3">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+<!-- Logo & Main Nav -->
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+</svg>
+</div>
+<span class="text-xl font-extrabold tracking-tight">AyurVeda</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Product</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+</div>
+<!-- Search & Actions -->
+<div class="flex flex-1 justify-end items-center gap-4 lg:gap-6">
+<div class="relative max-w-xs w-full hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#5e9a4c] text-xl">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-[#eaf3e7] dark:bg-white/5 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm placeholder-[#5e9a4c]" placeholder="Search products..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-[#eaf3e7] dark:bg-white/5 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="p-2 rounded-lg bg-[#eaf3e7] dark:bg-white/5 hover:bg-primary/20 transition-colors relative">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-[10px] font-bold px-1.5 rounded-full border-2 border-white">2</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#eaf3e7] dark:bg-white/5 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="text-sm font-bold hidden lg:inline">Login</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<div class="max-w-[1440px] mx-auto px-6 lg:px-20 py-10 flex flex-col md:flex-row gap-10">
+<!-- Side Navigation Bar -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="bg-white dark:bg-white/5 rounded-2xl p-6 shadow-sm border border-[#eaf3e7] dark:border-white/10 sticky top-28">
+<div class="mb-8 px-2">
+<h3 class="text-lg font-bold">Unified Profile</h3>
+<p class="text-xs text-[#5e9a4c] font-medium uppercase tracking-wider mt-1">Premium Member</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#eaf3e7] dark:hover:bg-white/5 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined">person</span>
+                        Profile
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl active-nav transition-all text-sm font-bold text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">package</span>
+                        Orders
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#eaf3e7] dark:hover:bg-white/5 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined">location_on</span>
+                        Addresses
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#eaf3e7] dark:hover:bg-white/5 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+<div class="mt-6 pt-6 border-t border-[#eaf3e7] dark:border-white/10">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 text-red-500 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined">logout</span>
+                            Logout
+                        </a>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight">My Orders</h1>
+<p class="text-[#5e9a4c] mt-2">Track and manage your order history. (12 total orders)</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                        Filter
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+                        Export
+                    </button>
+</div>
+</div>
+<!-- Search Bar Component -->
+<div class="mb-8">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#5e9a4c] transition-colors group-focus-within:text-primary">search</span>
+<input class="w-full h-14 pl-12 pr-6 bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm" placeholder="Search by Order ID, Product Name or Status..." type="text"/>
+</div>
+</div>
+<!-- Orders List -->
+<div class="flex flex-col gap-4">
+<!-- Order Card: Delivered -->
+<div class="bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-xl bg-[#f6f8f6] flex-shrink-0 bg-cover bg-center" data-alt="Ashwagandha root powder packaging" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALaerWIJTgtvC6L3hToX4brA0Bxx8AVC_i5GYGV_Uo5Qvp5yRx2OiML1QUfhUl0TbwEEB1KnvfM5EgaZPEboBS-LtEE9Wfoxi1_xLNkhm3FWGTzM5v85xvf9cAeHUFdxHnKEIP8YTAuxS7zzHGjAuolirPC_EVUDnHlXQUw6J4G7_Y6lIwrzNQQztAh_guYqK0ciYREGz7pfIp_EfxGsdNZ6FmeqOYSRPii8q7gVD0TK5vWVpO8_Aormug0qMXcHaABSzkv4Gi3gui')"></div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-primary/15 text-primary text-[11px] font-bold uppercase tracking-wider rounded-full">Delivered</span>
+<span class="text-sm text-[#5e9a4c] font-medium">Placed on Oct 24, 2023</span>
+</div>
+<h3 class="text-lg font-extrabold mb-1">Order #AYU-12345</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">1 Item: Ashwagandha Premium Root Powder</p>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4 border-t lg:border-t-0 lg:border-l border-[#eaf3e7] dark:border-white/10 pt-4 lg:pt-0 lg:pl-6">
+<div class="text-right">
+<p class="text-xs text-[#5e9a4c] font-medium uppercase">Total Amount</p>
+<p class="text-xl font-extrabold text-[#111b0d] dark:text-white">₹1,250.00</p>
+</div>
+<button class="bg-primary hover:bg-[#39c40f] text-[#111b0d] font-bold text-sm px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-primary/20">
+                            View Details
+                        </button>
+</div>
+</div>
+<!-- Order Card: Processing -->
+<div class="bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-xl bg-[#f6f8f6] flex-shrink-0 bg-cover bg-center" data-alt="Brahmi oil bottle for hair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxzXpJhLfbkY1KmQf-E01E5AnJ9pMJpmLWi5Pgz2mDzGCnLlEzY8YFHvWmq7HtiBCFlVwil7APtHPCdg9qQgVG6D8RzjbHld8MzJlq3elND1ir_cqIALWgy8RdQmRtzk0pGgSp5P9UDAKvFVJCaKixUqXWPSwIAiYuTrsiRtpmDWskRgqiGgY_KJ-3jCuMc6V_Lob_dHT7-hErk7i_U4WMGkey8NewQXSVy56JX6vmj2sy0N9vX76_RLOGGRAOaLmyHMk_y4wDiquu')"></div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-[11px] font-bold uppercase tracking-wider rounded-full">Processing</span>
+<span class="text-sm text-[#5e9a4c] font-medium">Placed on Nov 02, 2023</span>
+</div>
+<h3 class="text-lg font-extrabold mb-1">Order #AYU-12389</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">2 Items: Brahmi Oil (200ml), Herbal Tea Blend</p>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4 border-t lg:border-t-0 lg:border-l border-[#eaf3e7] dark:border-white/10 pt-4 lg:pt-0 lg:pl-6">
+<div class="text-right">
+<p class="text-xs text-[#5e9a4c] font-medium uppercase">Total Amount</p>
+<p class="text-xl font-extrabold text-[#111b0d] dark:text-white">₹2,480.00</p>
+</div>
+<button class="bg-primary hover:bg-[#39c40f] text-[#111b0d] font-bold text-sm px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-primary/20">
+                            View Details
+                        </button>
+</div>
+</div>
+<!-- Order Card: Cancelled -->
+<div class="bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center gap-6 shadow-sm hover:shadow-md transition-shadow opacity-75">
+<div class="w-24 h-24 rounded-xl bg-[#f6f8f6] flex-shrink-0 bg-cover bg-center grayscale" data-alt="Triphala capsules pack" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpVGAJBdcwKIe0HMXviawLEdc_w_nEp98d138FgwDZf3R-dwqdx0VtOlCCrED3txukp5TdRQ8LgqkrLH1MviQkGT40vYRikUZkMSUrDOqv2q_eOubRpK0WlyvnWjafgoPdhy0mT4R-nt33hbDQotH5GiISqivLBxP1dhlwcKw5lgj5Rj0u7UMBnwaxIpQQPDoawhCOf4_Y4jwEhXMOmaPmS4D7gPY9vEAwgokLEUB2UyrGUuzIumwAN7sq2s8KJX6CEWHTZlOO9eiM')"></div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-gray-400 text-[11px] font-bold uppercase tracking-wider rounded-full">Cancelled</span>
+<span class="text-sm text-[#5e9a4c] font-medium">Placed on Sep 15, 2023</span>
+</div>
+<h3 class="text-lg font-extrabold mb-1">Order #AYU-12102</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">1 Item: Triphala Capsules (60 count)</p>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4 border-t lg:border-t-0 lg:border-l border-[#eaf3e7] dark:border-white/10 pt-4 lg:pt-0 lg:pl-6">
+<div class="text-right">
+<p class="text-xs text-[#5e9a4c] font-medium uppercase">Total Amount</p>
+<p class="text-xl font-extrabold text-[#111b0d] dark:text-white">₹650.00</p>
+</div>
+<button class="bg-gray-100 dark:bg-white/10 text-[#111b0d] dark:text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+<!-- Order Card: Delivered 2 -->
+<div class="bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-xl bg-[#f6f8f6] flex-shrink-0 bg-cover bg-center" data-alt="Turmeric latte powder mix" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXLAoP0jwoVYPzdYH4SrX-3s7YUlHFMOKtcIt-nXgNeIREKRQH3LqPgNtC2zYsNN3OqcvU-_DIoDpQZwov9VsmWisP1IvDocZKbUEpHa0b_tgE1QadaiAMYn9Qvxw1nfIyG3vVlBV3RbTIaTwXuJvD58-MKjj8uSks7fNjw7TbFYjFk6E3lHdMwS93g241lhAH-oyavVO3JRwSnUq1osNEGZzR6FT2fSV9DirVUIsyd1rOnQbQr-SjONfMPhymUk2fHgIOz7a1ZgLe')"></div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-primary/15 text-primary text-[11px] font-bold uppercase tracking-wider rounded-full">Delivered</span>
+<span class="text-sm text-[#5e9a4c] font-medium">Placed on Aug 28, 2023</span>
+</div>
+<h3 class="text-lg font-extrabold mb-1">Order #AYU-11982</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">3 Items: Golden Milk Mix, Saffron Strands, Honey</p>
+</div>
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4 border-t lg:border-t-0 lg:border-l border-[#eaf3e7] dark:border-white/10 pt-4 lg:pt-0 lg:pl-6">
+<div class="text-right">
+<p class="text-xs text-[#5e9a4c] font-medium uppercase">Total Amount</p>
+<p class="text-xl font-extrabold text-[#111b0d] dark:text-white">₹3,120.00</p>
+</div>
+<button class="bg-primary hover:bg-[#39c40f] text-[#111b0d] font-bold text-sm px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-primary/20">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 text-[#5e9a4c] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-[#111b0d] font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 text-[#111b0d] dark:text-white font-medium hover:bg-[#eaf3e7] dark:hover:bg-white/10 transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 text-[#111b0d] dark:text-white font-medium hover:bg-[#eaf3e7] dark:hover:bg-white/10 transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-white/5 border border-[#eaf3e7] dark:border-white/10 text-[#5e9a4c] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer Space -->
+<footer class="mt-20 py-10 border-t border-[#eaf3e7] dark:border-white/10 bg-white dark:bg-background-dark px-20 text-center">
+<p class="text-[#5e9a4c] text-sm">© 2023 AyurVeda Ecommerce. All rights reserved. Premium Ayurvedic Care.</p>
+</footer>
+</body></html>

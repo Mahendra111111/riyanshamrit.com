@@ -1,0 +1,27 @@
+{
+  "name": "@ayurveda/validation-schemas",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Zod validation schemas shared across backend services",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.0"
+  }
+}

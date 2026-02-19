@@ -1,0 +1,38 @@
+{
+  "name": "@ayurveda/order-service",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Order Service — atomic order creation, state transitions, event emission",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
+    "@ayurveda/shared-types": "workspace:*",
+    "@ayurveda/shared-utils": "workspace:*",
+    "@ayurveda/validation-schemas": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.0"
+  }
+}
