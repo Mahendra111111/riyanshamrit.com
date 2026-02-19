@@ -92,11 +92,12 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /opt/ayurveda
+
             # Pull latest compose file
             git pull origin main
 
-            # Log in to GHCR on server
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            # Log in to GHCR using a PAT (GITHUB_TOKEN is not available in SSH context)
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
             # Pull new images
             docker compose pull
@@ -127,6 +128,7 @@ jobs:
   # ─── Deploy web frontend to Vercel ───────────────────────────────────────
   deploy-web:
     name: Deploy Web to Vercel
+    needs: build # only deploy after all Docker images built successfully
     runs-on: ubuntu-latest
     timeout-minutes: 15
 

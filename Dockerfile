@@ -74,4 +74,6 @@ USER appuser
 
 EXPOSE 3000
 
-CMD ["node", "apps/${SERVICE}/dist/index.js"]
+ENV SERVICE=${SERVICE}
+
+CMD node "apps/${SERVICE}/dist/index.js"
