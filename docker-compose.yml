@@ -61,7 +61,7 @@ services:
     container_name: ayurveda-auth-service
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "3010:3010"
     env_file: apps/auth-service/.env
     networks:
       - ayurveda
@@ -69,7 +69,7 @@ services:
       redis:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:3010/health"]
       interval: 15s
       timeout: 5s
       retries: 3
@@ -84,12 +84,12 @@ services:
     container_name: ayurveda-user-service
     restart: unless-stopped
     ports:
-      - "3003:3003"
+      - "3020:3020"
     env_file: apps/user-service/.env
     networks:
       - ayurveda
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3003/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:3020/health"]
       interval: 15s
       timeout: 5s
       retries: 3
@@ -104,12 +104,12 @@ services:
     container_name: ayurveda-product-service
     restart: unless-stopped
     ports:
-      - "3004:3004"
+      - "3030:3030"
     env_file: apps/product-service/.env
     networks:
       - ayurveda
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3004/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:3030/health"]
       interval: 15s
       timeout: 5s
       retries: 3
@@ -125,12 +125,12 @@ services:
     restart: unless-stopped
     # No host-facing port — internal network only
     expose:
-      - "3005"
+      - "3040"
     env_file: apps/inventory-service/.env
     networks:
       - ayurveda
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3005/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:3040/health"]
       interval: 15s
       timeout: 5s
       retries: 3
@@ -145,7 +145,7 @@ services:
     container_name: ayurveda-cart-service
     restart: unless-stopped
     ports:
-      - "3006:3006"
+      - "3050:3050"
     env_file: apps/cart-service/.env
     networks:
       - ayurveda
@@ -163,7 +163,7 @@ services:
     container_name: ayurveda-order-service
     restart: unless-stopped
     ports:
-      - "3007:3007"
+      - "3060:3060"
     env_file: apps/order-service/.env
     networks:
       - ayurveda
@@ -183,7 +183,7 @@ services:
     container_name: ayurveda-payment-service
     restart: unless-stopped
     ports:
-      - "3008:3008"
+      - "3070:3070"
     env_file: apps/payment-service/.env
     networks:
       - ayurveda
@@ -203,7 +203,7 @@ services:
     container_name: ayurveda-notification-service
     restart: unless-stopped
     expose:
-      - "3009"
+      - "3080"
     env_file: apps/notification-service/.env
     networks:
       - ayurveda
@@ -221,7 +221,7 @@ services:
     container_name: ayurveda-admin-service
     restart: unless-stopped
     ports:
-      - "3010:3010"
+      - "3090:3090"
     env_file: apps/admin-service/.env
     networks:
       - ayurveda

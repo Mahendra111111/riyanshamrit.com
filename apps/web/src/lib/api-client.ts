@@ -7,7 +7,7 @@
  * - No tokens stored in localStorage or Redux
  */
 
-const API_URL = process.env["NEXT_PUBLIC_API_URL"] ?? "http://localhost:3002";
+const API_URL = process.env["NEXT_PUBLIC_API_URL"] ?? "http://localhost:3000";
 
 export class ApiError extends Error {
   constructor(

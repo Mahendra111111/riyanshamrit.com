@@ -33,14 +33,14 @@ const app: Application = express();
 
 // ─── Service URLs (configured per-environment) ─────────────────────────────
 const SERVICES = {
-  auth: process.env["AUTH_SERVICE_URL"] ?? "http://localhost:3001",
-  user: process.env["USER_SERVICE_URL"] ?? "http://localhost:3003",
-  product: process.env["PRODUCT_SERVICE_URL"] ?? "http://localhost:3004",
-  inventory: process.env["INVENTORY_SERVICE_URL"] ?? "http://localhost:3005",
-  cart: process.env["CART_SERVICE_URL"] ?? "http://localhost:3006",
-  order: process.env["ORDER_SERVICE_URL"] ?? "http://localhost:3007",
-  payment: process.env["PAYMENT_SERVICE_URL"] ?? "http://localhost:3008",
-  admin: process.env["ADMIN_SERVICE_URL"] ?? "http://localhost:3010",
+  auth: process.env["AUTH_SERVICE_URL"] ?? "http://localhost:3010",
+  user: process.env["USER_SERVICE_URL"] ?? "http://localhost:3020",
+  product: process.env["PRODUCT_SERVICE_URL"] ?? "http://localhost:3030",
+  inventory: process.env["INVENTORY_SERVICE_URL"] ?? "http://localhost:3040",
+  cart: process.env["CART_SERVICE_URL"] ?? "http://localhost:3050",
+  order: process.env["ORDER_SERVICE_URL"] ?? "http://localhost:3060",
+  payment: process.env["PAYMENT_SERVICE_URL"] ?? "http://localhost:3070",
+  admin: process.env["ADMIN_SERVICE_URL"] ?? "http://localhost:3090",
 } as const;
 
 const CORS_ORIGIN = process.env["CORS_ORIGIN"] ?? "http://localhost:3000";
@@ -147,7 +147,7 @@ function makeProxy(target: string) {
     target,
     changeOrigin: true,
     on: {
-      error: (_err, _req, res) => {
+      error: (_err: Error, _req: Request, res: any) => {
         (res as Response)
           .status(502)
           .json(

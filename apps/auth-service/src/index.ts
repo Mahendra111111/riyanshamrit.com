@@ -37,11 +37,14 @@ const allowedOrigins = (
   process.env["ALLOWED_ORIGINS"] ?? "http://localhost:3000"
 )
   .split(",")
-  .map((o) => o.trim());
+  .map((o: string) => o.trim());
 
 app.use(
   cors({
-    origin: (origin, callback) => {
+    origin: (
+      origin: string | undefined,
+      callback: (err: Error | null, allow?: boolean) => void,
+    ) => {
       // Allow requests with no origin (e.g. server-to-server)
       if (!origin || allowedOrigins.includes(origin ?? "")) {
         callback(null, true);
@@ -105,7 +108,7 @@ app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
 
-const PORT = parseInt(process.env["PORT"] ?? "3001", 10);
+const PORT = parseInt(process.env["PORT"] ?? "3010", 10);
 
 app.listen(PORT, () => {
   logger.info(`Auth service running on port ${PORT}`, { port: PORT });
