@@ -51,10 +51,10 @@ User
 Cloudflare (CDN + WAF)
 ↓
 Routing by subdomain
-├── www.domain.com
+├── www.riyanshamrit.com
  → Vercel Frontend
-├── api.domain.com → Vercel Backend
-└── auth.domain.com → AWS Auth Service
+├── api.riyanshamrit.com → Vercel Backend
+└── auth.riyanshamrit.com → AWS Auth Service
 
 
 Security is enforced at every layer.
@@ -192,18 +192,14 @@ No deployment occurs if tests fail.
 
 ## 1️⃣ Clone Repository
 
-
 git clone <repo-url>
 cd repo
-
 
 ---
 
 ## 2️⃣ Install Dependencies
 
-
 npm install
-
 
 ---
 
@@ -211,10 +207,8 @@ npm install
 
 Create:
 
-
 .env.local
 .env.test
-
 
 Set:
 
@@ -233,13 +227,10 @@ Never commit `.env` files.
 
 Frontend:
 
-
 cd apps/web
 npm run dev
 
-
 Backend:
-
 
 cd apps/api
 npm run dev
@@ -247,33 +238,20 @@ npm run dev
 
 Auth Service (Docker):
 
-
 cd apps/auth-service
 docker build -t auth-service .
 docker run -p 4000:4000 auth-service
-
 
 ---
 
 # 🧪 Running Tests
 
 Run all tests:
-
-
 npm run test
-
-
 Run with coverage:
-
-
 npm run test:coverage
-
-
 Run E2E:
-
-
 npm run test:e2e
-
 
 ---
 
